@@ -1,0 +1,83 @@
+.skills {
+  padding: clamp(64px, 10vh, 120px) 0 clamp(80px, 12vh, 140px);
+  background: var(--paper);
+}
+
+.skills__head {
+  margin-bottom: clamp(28px, 5vh, 52px);
+  padding-inline: var(--pad);
+}
+
+.skills__title {
+  margin: 0;
+  font-size: clamp(30px, 5vw, 68px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+/* ---- seamless two-row marquee ---- */
+.skills__marquee {
+  display: grid;
+  gap: clamp(12px, 1.6vw, 22px);
+  overflow: hidden;
+}
+
+.skills__row {
+  overflow: hidden;
+}
+
+.skills__track {
+  display: flex;
+  gap: clamp(12px, 1.6vw, 22px);
+  width: max-content;
+  padding-right: clamp(12px, 1.6vw, 22px);
+  animation: marquee 46s linear infinite;
+  will-change: transform;
+}
+
+.skills__row[data-dir='right'] .skills__track {
+  animation-direction: reverse;
+}
+
+/* -50% is exactly one copy of the doubled list */
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.skill {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  flex: 0 0 auto;
+  width: clamp(150px, 17vw, 230px);
+  aspect-ratio: 5 / 3;
+  padding: 18px;
+  border-radius: 18px;
+  background: #fff;
+  /* the row never stops, so the tiles stay inert - no hover, no transition */
+  pointer-events: none;
+}
+
+.skill__icon {
+  width: clamp(44px, 4.8vw, 68px);
+  height: clamp(44px, 4.8vw, 68px);
+  object-fit: contain;
+}
+
+.skill__name {
+  font-size: clamp(12px, 1.1vw, 15px);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills__track {
+    animation: none;
+  }
+}

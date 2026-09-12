@@ -1,0 +1,58 @@
+.sentence {
+  position: relative;
+  height: 480vh;
+  background: var(--paper);
+}
+
+.sentence__sticky {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: grid;
+  align-content: center;
+  height: 100svh;
+  /* clip sideways only. `overflow: hidden` clips both axes, which was cutting
+     the descenders and the tops of the letters that lift as they settle. */
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+.sentence__track {
+  display: flex;
+  align-items: baseline;
+  gap: 0.34em;
+  width: max-content;
+  padding-inline: 4vw;
+  font-size: clamp(48px, 11vw, 168px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.sentence__word {
+  display: inline-flex;
+}
+
+.sentence__char {
+  display: inline-block;
+  transform-origin: 50% 90%;
+  will-change: transform;
+}
+
+/* the colour rises through the letter as it settles into line */
+.sentence__word[data-tone] .sentence__char {
+  background-image: linear-gradient(
+    to top,
+    var(--tone-color) var(--fill, 0%),
+    var(--ink) var(--fill, 0%)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.sentence__word[data-tone='blue'] { --tone-color: var(--blue); }
+.sentence__word[data-tone='green'] { --tone-color: var(--green-deep); }
+.sentence__word[data-tone='navy'] { --tone-color: var(--navy); }

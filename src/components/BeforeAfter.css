@@ -1,0 +1,91 @@
+.ba__frame {
+  position: relative;
+  container-type: inline-size;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius);
+  background: var(--mist);
+  cursor: ew-resize;
+  touch-action: none;
+  user-select: none;
+}
+
+.ba__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.ba__clip {
+  position: absolute;
+  inset: 0;
+  width: var(--split);
+  overflow: hidden;
+}
+
+/* the inner image keeps the frame's width so it never squashes as it clips */
+.ba__clip .ba__img {
+  width: 100cqw;
+}
+
+/* only the intro pass is eased; dragging has to track the pointer exactly */
+.ba.is-sweeping .ba__clip,
+.ba.is-sweeping .ba__line,
+.ba.is-sweeping .ba__handle {
+  transition:
+    width 1s cubic-bezier(0.76, 0, 0.24, 1),
+    left 1s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.ba__line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--split);
+  width: 3px;
+  background: #fff;
+  translate: -50% 0;
+  pointer-events: none;
+}
+
+.ba__tag {
+  position: absolute;
+  top: 14px;
+  padding: 7px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--night);
+  background: rgba(255, 255, 255, 0.92);
+  pointer-events: none;
+}
+
+.ba__tag--before { left: 14px; }
+.ba__tag--after { right: 14px; }
+
+.ba__handle {
+  position: absolute;
+  top: 50%;
+  left: var(--split);
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--night);
+  background: #fff;
+  box-shadow: 0 8px 22px -8px rgba(0, 0, 41, 0.6);
+  translate: -50% -50%;
+  cursor: ew-resize;
+}
+
+.ba__handle svg {
+  width: 22px;
+  height: 22px;
+}
+
+.ba__handle:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}

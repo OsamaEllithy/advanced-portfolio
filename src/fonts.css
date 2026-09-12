@@ -1,0 +1,64 @@
+/* ---------------------------------------------------------------
+   Degular — licensed from OH no Type Co, so the files are not in the
+   repo. Drop the woff2s into /public/fonts and they take over on the
+   next reload; until then Figtree carries the same proportions.
+
+   Alternatively, if you use the Adobe Fonts web project, delete this
+   file's @font-face rules and add the kit <link> in index.html.
+   --------------------------------------------------------------- */
+@font-face {
+  font-family: 'Degular';
+  src: url('/fonts/Degular-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Degular';
+  src: url('/fonts/Degular-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Degular';
+  src: url('/fonts/Degular-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Degular';
+  src: url('/fonts/Degular-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Degular';
+  src: url('/fonts/Degular-Black.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Display cut, for the oversized headlines */
+@font-face {
+  font-family: 'Degular Display';
+  src: url('/fonts/DegularDisplay-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Degular Display';
+  src: url('/fonts/DegularDisplay-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

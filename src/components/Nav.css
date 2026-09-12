@@ -1,0 +1,173 @@
+/* The bar belongs to the hero — it sits at the top of the page and scrolls
+   away with it, no surface of its own.
+   Layering: logo (40) sits *under* the menu sheet (50); only the toggle (60)
+   stays above it, so opening the menu swallows the logo. */
+.nav {
+  position: absolute;
+  top: var(--nav-top);
+  right: 0;
+  left: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  height: var(--nav-h);
+  padding-inline: var(--pad);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.nav[data-hidden] {
+  opacity: 0;
+}
+
+.nav__logo {
+  display: block;
+  pointer-events: auto;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* the mark ships in brand blue — knock it to pure white for the blue hero */
+.nav__logo img {
+  width: clamp(30px, 3.1vw, 44px);
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+
+.nav__logo:hover {
+  transform: rotate(-4deg) scale(1.06);
+}
+
+/* ---- toggle ---- */
+.burger {
+  position: absolute;
+  top: var(--nav-top);
+  right: var(--pad);
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: var(--nav-h);
+}
+
+.burger span {
+  position: absolute;
+  left: 50%;
+  width: 30px;
+  height: 2px;
+  margin-left: -15px;
+  background: #fff;
+  border-radius: 2px;
+  /* translate and rotate are separate properties so each phase can have its
+     own delay: closing rotates back first, then the bars spread apart. */
+  transition:
+    translate 0.32s cubic-bezier(0.65, 0, 0.35, 1) 0.24s,
+    rotate 0.34s cubic-bezier(0.65, 0, 0.35, 1),
+    background 0.35s ease;
+}
+
+.burger span:first-child { translate: 0 -5px; }
+.burger span:last-child { translate: 0 5px; }
+
+.burger:not(.is-open):hover span:first-child { translate: 0 -7px; }
+.burger:not(.is-open):hover span:last-child { translate: 0 7px; }
+
+/* opening: the bars meet in the middle first, then cross */
+.burger.is-open span {
+  transition:
+    translate 0.3s cubic-bezier(0.65, 0, 0.35, 1),
+    rotate 0.36s cubic-bezier(0.65, 0, 0.35, 1) 0.22s,
+    background 0.35s ease;
+}
+
+.burger.is-open span:first-child {
+  translate: 0 0;
+  rotate: 45deg;
+}
+
+.burger.is-open span:last-child {
+  translate: 0 0;
+  rotate: -45deg;
+}
+
+/* ---- full-bleed overlay menu ---- */
+.menu {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  align-content: center;
+  gap: 24px;
+  padding: 14vh var(--pad) var(--pad);
+  background: var(--navy);
+  clip-path: circle(0% at calc(100% - 42px) 42px);
+  transition: clip-path 0.75s cubic-bezier(0.76, 0, 0.24, 1);
+  visibility: hidden;
+}
+
+.menu.is-open {
+  clip-path: circle(150% at calc(100% - 42px) 42px);
+  visibility: visible;
+}
+
+.menu__list {
+  display: grid;
+  gap: clamp(2px, 1vw, 10px);
+}
+
+.menu__list button {
+  width: fit-content;
+  padding: 0;
+  overflow: hidden;
+  text-align: left;
+  font-size: clamp(44px, 11vw, 128px);
+  font-weight: 700;
+  line-height: 1.05;
+  color: #fff;
+}
+
+.menu__list button span {
+  display: inline-block;
+  transform: translateY(110%);
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: calc(var(--i) * 60ms + 120ms);
+}
+
+.menu.is-open .menu__list button span {
+  transform: none;
+}
+
+.menu__list button:hover span {
+  color: var(--green);
+  transform: translateX(18px) rotate(-2deg);
+  transition-delay: 0s;
+}
+
+.menu__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  transition: opacity 0.5s ease 0.5s;
+}
+
+.menu.is-open .menu__foot {
+  opacity: 1;
+}
+
+.menu__foot em {
+  padding: 0 8px;
+  font-style: normal;
+  color: var(--green);
+}
+
+.menu__foot a {
+  transition: color 0.25s ease;
+}
+
+.menu__foot a:hover {
+  color: var(--green);
+}
