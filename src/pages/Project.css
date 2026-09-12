@@ -122,10 +122,14 @@
   bottom: 32px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 12px 24px;
+  padding: 12px clamp(16px, 4vw, 24px);
   background: var(--night);
   color: #fff;
-  font-size: 14px;
+  /* one line at every width: the copy is short, so nowrap plus a fluid
+     size keeps it on a single row down to a 320px screen */
+  white-space: nowrap;
+  max-width: calc(100vw - 24px);
+  font-size: clamp(12.5px, 3.2vw, 14px);
   font-weight: 600;
   border-radius: 999px;
   box-shadow: 0 10px 30px rgba(0, 0, 41, 0.4);
