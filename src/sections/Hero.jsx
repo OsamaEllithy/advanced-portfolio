@@ -2,7 +2,6 @@ import './Hero.css'
 
 /* Two fixed lines, with each word pre-numbered so the reveal can stagger. */
 let counter = 0
-const LABELS = ['صلِّ', 'على', 'النبي']
 
 /* three steps of the job, stacked like stairs on the left */
 const STEPS = ['plan', 'build', 'launch']
@@ -52,14 +51,6 @@ export default function Hero() {
         {STEPS.map((step, i) => (
           <li key={step} style={{ '--i': i }}>
             {step}
-          </li>
-        ))}
-      </ul>
-
-      <ul className="hero__labels" lang="ar" dir="rtl">
-        {LABELS.map((label, i) => (
-          <li className="hero__label pill" key={label} style={{ '--i': i }}>
-            {label}
           </li>
         ))}
       </ul>

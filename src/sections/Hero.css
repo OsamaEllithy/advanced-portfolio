@@ -103,46 +103,6 @@
   animation-delay: calc(var(--i) * 110ms + 350ms);
 }
 
-.hero__labels {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  pointer-events: none;
-}
-
-.hero__label {
-  position: absolute;
-  padding: 10px 20px 13px;
-  font-family: var(--arabic);
-  font-size: clamp(14px, 1.25vw, 18px);
-  line-height: 1.4;
-  color: var(--night);
-  background: var(--green);
-  box-shadow: 0 14px 28px -16px rgba(0, 0, 41, 0.7);
-  animation: floaty 7s ease-in-out infinite;
-  animation-delay: calc(var(--i) * -2.3s);
-}
-
-/* hugging the portrait, and kept in a tighter vertical band */
-.hero__label:nth-child(1) { top: 26%; right: 24%; rotate: 5deg; }
-.hero__label:nth-child(2) { top: 23%; left: 25%; rotate: -5deg; }
-.hero__label:nth-child(3) { top: 34%; left: 22%; rotate: 4deg; }
-
-@media (max-width: 768px) {
-  .hero__label:nth-child(1) { top: 20%; right: 10%; rotate: 5deg; }
-  .hero__label:nth-child(2) { top: 25%; left: 8%; rotate: -5deg; }
-  .hero__label:nth-child(3) { top: 38%; left: 12%; rotate: 4deg; }
-}
-
-@keyframes floaty {
-  50% {
-    transform: translateY(-22px);
-  }
-}
-
 /* ---- tagline: exactly two lines ---- */
 .hero__tagline {
   position: relative;

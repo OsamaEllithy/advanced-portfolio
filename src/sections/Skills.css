@@ -22,8 +22,18 @@
   overflow: hidden;
 }
 
+/* the row drifts on its own and can also be dragged, so it takes the pointer
+   itself; pan-y leaves vertical page scrolling to the browser */
 .skills__row {
   overflow: hidden;
+  cursor: grab;
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.skills__row.is-dragging {
+  cursor: grabbing;
 }
 
 .skills__track {
@@ -31,22 +41,9 @@
   gap: clamp(12px, 1.6vw, 22px);
   width: max-content;
   padding-right: clamp(12px, 1.6vw, 22px);
-  animation: marquee 46s linear infinite;
+  /* the offset is set from a frame loop in Skills.jsx, so a drag and the
+     drift can share it - see the comment on Row() */
   will-change: transform;
-}
-
-.skills__row[data-dir='right'] .skills__track {
-  animation-direction: reverse;
-}
-
-/* -50% is exactly one copy of the doubled list */
-@keyframes marquee {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    transform: translate3d(-50%, 0, 0);
-  }
 }
 
 .skill {
@@ -59,7 +56,8 @@
   padding: 18px;
   border-radius: 18px;
   background: #fff;
-  /* the row never stops, so the tiles stay inert - no hover, no transition */
+  /* the tiles stay inert: the row above them handles the drag, and this also
+     stops the browser starting its own image drag */
   pointer-events: none;
 }
 
@@ -76,8 +74,4 @@
   text-align: center;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .skills__track {
-    animation: none;
-  }
-}
+/* reduced motion is handled in Skills.jsx: the drift stops, dragging stays */

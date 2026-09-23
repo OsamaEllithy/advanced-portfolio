@@ -22,7 +22,6 @@
 
   --sans: 'Degular', 'Degular Display', 'Figtree', system-ui, 'Segoe UI', Roboto, sans-serif;
   /* every fallback here actually ships Arabic glyphs */
-  --arabic: 'Noto Kufi Arabic', 'Segoe UI', Tahoma, Arial, sans-serif;
 
   /* rhythm */
   --pad: clamp(20px, 5vw, 72px);
