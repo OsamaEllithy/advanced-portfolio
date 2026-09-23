@@ -66,12 +66,6 @@
   filter: url(#portrait-outline);
 }
 
-@media (max-width: 768px) {
-  .hero__portrait img {
-    height: 110%;
-  }
-}
-
 /* stacked on the left, each line stepped further in, sitting on the same
    baseline band as the paragraph on the right */
 .hero__steps {
@@ -132,5 +126,52 @@
   to {
     opacity: 1;
     translate: 0 0;
+  }
+}
+
+/* ---- narrow screens: stack instead of overlay ----
+   The desktop hero deliberately lays the words over the photo, which needs
+   width either side of the figure to work. Below ~900px there is none, so the
+   hero becomes a column: the stepped words, then the line, then the portrait
+   filling whatever height is left. Nothing sits on the photo. */
+@media (max-width: 900px) {
+  .hero {
+    align-content: stretch;
+    justify-items: stretch;
+    grid-template-rows: auto auto minmax(0, 1fr);
+    row-gap: clamp(14px, 2.6vh, 26px);
+    /* clears the nav exactly rather than by guesswork */
+    padding: calc(var(--nav-top) + var(--nav-h) + clamp(16px, 3.5vh, 34px)) var(--pad) 0;
+  }
+
+  .hero__steps {
+    position: static;
+    grid-row: 1;
+    gap: clamp(2px, 0.8vh, 10px);
+    font-size: clamp(40px, 12vw, 78px);
+  }
+
+  .hero__tagline {
+    grid-row: 2;
+    max-width: 34ch;
+    text-align: left;
+    font-size: clamp(14px, 3.8vw, 19px);
+  }
+
+  /* left-aligned now, so the gap belongs after each word, not before it */
+  .hero__line span {
+    margin-left: 0;
+    margin-right: 0.32em;
+  }
+
+  .hero__portrait {
+    position: relative;
+    grid-row: 3;
+    inset: auto;
+    min-height: clamp(260px, 42svh, 460px);
+  }
+
+  .hero__portrait img {
+    height: 118%;
   }
 }
