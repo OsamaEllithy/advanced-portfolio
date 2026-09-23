@@ -231,6 +231,86 @@ export const PROJECTS = [
     lift: 0,
   }),
   project({
+    slug: 'solera',
+    title: 'Solera',
+    cover: '/images/projects/solera.webp',
+    role: 'UI/UX, Shopify build & SEO',
+    stack: ['Shopify', 'Liquid', 'UI/UX', 'SEO'],
+    previewLink: 'https://soleraelite.com',
+    tagline: 'A perfume house on Shopify, designed and built to sell rather than just to look good.',
+    intro:
+      'Solera is a perfume brand that needed a storefront worthy of the product. The work covered '
+      + 'the whole thing: the UI and UX from a blank page, the build on Shopify, every '
+      + 'integration the shop runs on, and the SEO underneath it. It started bringing in real '
+      + 'sales noticeably quickly.',
+    sections: [
+      {
+        heading: 'The brief',
+        body: [
+          'Perfume is a hard thing to sell online, because the one argument that normally closes '
+            + 'the sale is not available. Everything has to be carried by the photography, the '
+            + 'wording and the way the store feels, and the brand needed all three to say '
+            + 'something in the same register as the product.',
+          'On top of that it had to be a real shop: findable in search, quick to buy from, and '
+            + 'connected to the tools the business actually runs on.',
+        ],
+      },
+      {
+        heading: 'How I approached it',
+        body: [
+          'The UI and UX were designed before anything was built. The store is arranged so the '
+            + 'product is always the loudest thing on the screen: restrained type, a lot of space, '
+            + 'and a palette that stays out of the way of the bottles.',
+          'The path to checkout was kept deliberately short. A visitor can get from the home page '
+            + 'to a product to the cart in a few taps, and nothing on the way asks them for a '
+            + 'decision that does not help them buy.',
+        ],
+      },
+      {
+        heading: 'The build',
+        body: [
+          'Built on Shopify, in Liquid, rather than assembled from a page builder, so the '
+            + 'storefront follows the design instead of the design being bent to fit a theme. '
+            + 'Sections were built to be editable, so the team can run a campaign without needing '
+            + 'me.',
+          'I used Claude throughout the development as part of the workflow, which kept the pace '
+            + 'up on the repetitive Liquid work and left more time for the parts that needed '
+            + 'judgement.',
+          'All the integrations the shop depends on were wired up and tested end to end: payments, '
+            + 'shipping, the apps the team works in, and the analytics behind them, so orders flow '
+            + 'through without anyone having to chase them.',
+        ],
+      },
+      {
+        heading: 'The result',
+        body: [
+          'The store started producing noticeable sales soon after launch, which is the only '
+            + 'metric that settles an argument about a storefront.',
+          'Search visibility came along with it: the technical SEO was built into the store rather '
+            + 'than added later, so product and collection pages arrive already in shape for '
+            + 'search.',
+        ],
+      },
+    ],
+    summary: {
+      body: [
+        'Solera is the project where the design work and the commercial result line up most '
+          + 'clearly. Every decision on the page was made against one question: does this help '
+          + 'someone buy a bottle they cannot smell?',
+        'Doing the design, the Shopify build, the integrations and the SEO in one pass is what '
+          + 'kept the store coherent, because nothing had to be retrofitted into someone '
+          + "else's structure.",
+      ],
+      highlights: [
+        'Noticeable sales shortly after launch',
+        'Custom Liquid build on Shopify, no page builder',
+        'UI/UX, integrations and SEO all handled in one pass',
+      ],
+    },
+    tilt: -5,
+    lift: 22,
+  }),
+  project({
     slug: 'nabda-tech',
     title: 'Nabda Tech',
     cover: '/images/projects/nabda.webp',
