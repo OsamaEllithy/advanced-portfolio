@@ -5,11 +5,11 @@ import './Media.css'
  * Image slot that degrades to a coloured placeholder until the real asset is
  * dropped into /public/images. Keeps the layout honest while art is missing.
  */
-export default function Media({ src, alt = '', tone = 'mist', label, className = '' }) {
+export default function Media({ src, alt = '', label, className = '' }) {
   const [failed, setFailed] = useState(!src)
 
   return (
-    <div className={`media media--${tone} ${className}`.trim()} data-empty={failed || undefined}>
+    <div className={`media ${className}`.trim()} data-empty={failed || undefined}>
       {!failed && <img src={src} alt={alt} loading="lazy" onError={() => setFailed(true)} />}
       {failed && (
         <span className="media__ghost">

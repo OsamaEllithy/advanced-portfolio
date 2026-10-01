@@ -12,12 +12,12 @@ here is plain CSS and a few small hooks.
 
 **Home** — a hero with a cut-out portrait outlined by an SVG filter, a sentence
 that sweeps across the viewport as you scroll, an about section with counters that
-run from zero, a rail of work cards, a services carousel, a tools marquee and the
-footer.
+run from zero, a rail of work cards, a services carousel, a tools marquee you can
+drag by hand, and the footer.
 
-**Project pages** — one template at `/work/:slug` renders all nine case studies
-from a single data file. Four of them include a draggable before/after slider that
-plays an intro sweep when the section comes into view.
+**Project pages** — one template at `/work/:slug` renders every case study from a
+single data file. The projects that had a previous design also carry a draggable
+before/after slider that plays an intro sweep when the section comes into view.
 
 ## Stack
 

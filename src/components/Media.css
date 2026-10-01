@@ -12,13 +12,6 @@
   object-fit: cover;
 }
 
-.media--blue { background: var(--blue); }
-.media--navy { background: var(--navy); }
-.media--night { background: var(--night); }
-.media--mist { background: var(--mist); }
-.media--grey { background: var(--grey); }
-.media--green { background: var(--green); }
-
 .media__ghost {
   position: absolute;
   inset: 0;
@@ -26,18 +19,7 @@
   place-content: center;
   justify-items: center;
   gap: 8px;
-  color: rgba(255, 255, 255, 0.6);
-  background-image:
-    repeating-linear-gradient(
-      45deg,
-      rgba(255, 255, 255, 0.18) 0 12px,
-      transparent 12px 24px
-    );
-}
-
-.media--mist .media__ghost,
-.media--grey .media__ghost,
-.media--green .media__ghost {
+  /* the slot is always the light mist colour, so the mark reads dark */
   color: rgba(0, 0, 41, 0.42);
   background-image:
     repeating-linear-gradient(

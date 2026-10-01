@@ -15,7 +15,6 @@
 
   /* neutrals */
   --paper: #eff1f5;
-  --paper-2: var(--mist);
   --ink: var(--night);
   --ink-soft: #55586e;
   --line: rgba(0, 0, 41, 0.16);
