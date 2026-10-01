@@ -19,8 +19,10 @@
   --ink-soft: #55586e;
   --line: rgba(0, 0, 41, 0.16);
 
-  /* type: Sora carries the text, Space Grotesk carries the figures */
-  --sans: 'Sora', system-ui, 'Segoe UI', Roboto, sans-serif;
+  /* type: Degular carries the text, Space Grotesk carries the figures.
+     Degular is licensed, so until its woff2 files are in /public/fonts the
+     text renders in Figtree, which shares its proportions. */
+  --sans: 'Degular', 'Degular Display', 'Figtree', system-ui, 'Segoe UI', Roboto, sans-serif;
   --nums: 'Space Grotesk', var(--sans);
 
   /* rhythm */

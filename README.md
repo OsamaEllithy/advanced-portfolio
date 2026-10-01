@@ -46,6 +46,7 @@ Node 20 or newer.
 ```
 public/
   images/          project covers, skill logos, portrait
+  fonts/           Degular woff2 files go here (see the README inside)
   _redirects       SPA fallback for Netlify
   .htaccess        SPA fallback for Apache
 src/
@@ -69,10 +70,13 @@ compare against; leave it out and the slider does not render.
 
 ## Notes
 
-- **Type.** Two faces, both from Google Fonts, both loaded as variable fonts:
-  **Sora** sets everything that is words, and **Space Grotesk** sets everything
-  that is a figure — the counters, the project count, the years. The split lives
-  in two tokens, `--sans` and `--nums`, so no component names a font directly.
+- **Type.** **Degular** sets everything that is words and **Space Grotesk**
+  everything that is a figure — the counters, the project count, the years. The
+  split lives in two tokens, `--sans` and `--nums`, so no component names a font
+  directly. Degular is licensed, so its `.woff2` files are deliberately not in
+  this repo; drop them into `public/fonts/` following the README there. Until
+  then the text falls back to Figtree, which shares Degular's proportions.
+  Space Grotesk comes from Google Fonts and needs nothing.
 - **No animation library.** Reveals use a scroll listener plus
   `getBoundingClientRect` rather than IntersectionObserver, because observers with
   a threshold never fire for elements shorter than the trigger area.
