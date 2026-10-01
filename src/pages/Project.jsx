@@ -44,7 +44,7 @@ export default function Project() {
         <dl className="project__meta">
           <div>
             <dt>Year</dt>
-            <dd>{year}</dd>
+            <dd className="project__year">{year}</dd>
           </div>
           <div>
             <dt>Role</dt>

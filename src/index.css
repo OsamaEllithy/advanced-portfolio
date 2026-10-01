@@ -19,8 +19,9 @@
   --ink-soft: #55586e;
   --line: rgba(0, 0, 41, 0.16);
 
-  --sans: 'Degular', 'Degular Display', 'Figtree', system-ui, 'Segoe UI', Roboto, sans-serif;
-  /* every fallback here actually ships Arabic glyphs */
+  /* type: Sora carries the text, Space Grotesk carries the figures */
+  --sans: 'Sora', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --nums: 'Space Grotesk', var(--sans);
 
   /* rhythm */
   --pad: clamp(20px, 5vw, 72px);

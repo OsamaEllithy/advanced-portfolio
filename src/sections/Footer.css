@@ -175,3 +175,7 @@
 .footer__credits:hover {
   transform: translateY(-3px);
 }
+
+.footer__year {
+  font-family: var(--nums);
+}

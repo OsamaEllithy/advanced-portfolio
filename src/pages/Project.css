@@ -76,6 +76,10 @@
   font-weight: 600;
 }
 
+.project__year {
+  font-family: var(--nums);
+}
+
 .project__meta-stack dd {
   display: flex;
   flex-wrap: wrap;

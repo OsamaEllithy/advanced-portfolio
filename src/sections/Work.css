@@ -70,6 +70,7 @@
 }
 
 .work__count {
+  font-family: var(--nums);
   color: var(--ink-soft);
 }
 

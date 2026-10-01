@@ -84,7 +84,9 @@ export default function Footer() {
         >
           back to top
         </button>
-        <p>© {new Date().getFullYear()} osama abdelnaser, built by me</p>
+        <p>
+            © <time className="footer__year">{new Date().getFullYear()}</time> osama abdelnaser, built by me
+          </p>
       </div>
     </footer>
   )
