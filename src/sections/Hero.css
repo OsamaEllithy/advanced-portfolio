@@ -47,7 +47,10 @@
 .hero__portrait {
   position: absolute;
   inset: 0;
-  z-index: 0;
+  /* above the words and the line, so the figure is never cut into by text.
+     `isolation: isolate` on .hero keeps this inside the section, so the nav
+     still sits over it. */
+  z-index: 3;
   overflow: hidden;
   pointer-events: none;
 }
