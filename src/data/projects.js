@@ -244,57 +244,47 @@ export const PROJECTS = [
     tagline: 'A site for a snack everyone grew up with, built with the Egyptian street in it rather than next to it.',
     intro:
       'HoHos is a snack people here grew up on, so the last thing it needed was a tidy '
-      + 'corporate product page. The brief was to make something genuinely fun, close to the '
-      + 'people who actually eat it, and Egyptian in a way that feels lived in. It was built '
-      + 'in React with the 3D made in Blender, and it landed well enough that the Edita team '
-      + 'wrote in to say so.',
+      + 'corporate product page. It had to be fun, close to the people who actually eat it, '
+      + 'and Egyptian in a way that feels lived in.',
     sections: [
       {
         heading: 'The brief',
         body: [
-          'Everyone already knows HoHos. There was nothing to explain and nothing to sell in '
-            + 'the usual sense, which takes the easy structure off the table: no feature list, '
-            + 'no comparison table, no reason to scroll except that scrolling is enjoyable.',
-          'The hard part was the Egyptian character. It is the kind of thing that collapses '
-            + 'into a few tired symbols the moment you stop paying attention, and a brand this '
-            + 'familiar would have been the first to look fake doing it.',
+          'Everyone already knows HoHos. Nothing to explain, nothing to sell in the usual '
+            + 'sense, which takes the easy structure off the table: no feature list, no '
+            + 'comparison, no reason to scroll except that scrolling is enjoyable.',
+          'The Egyptian character was the hard part. It collapses into a few tired symbols the '
+            + 'moment you stop paying attention, and a brand this familiar would be the first to '
+            + 'look fake doing it.',
         ],
       },
       {
         heading: 'How I approached it',
         body: [
-          'Tone first, structure second. I decided what the site should feel like in the first '
-            + 'two seconds and let everything else follow from there, which is why the loading '
-            + 'screen got designed before any page did: the logo turns up riding a tuk-tuk, on '
-            + 'the brand red, and the rest of the site inherits that promise.',
-          'The reference was the street rather than the supermarket shelf. Oversized type that '
-            + 'repeats like a chant, the red doing the shouting, Arabic sitting naturally in the '
-            + 'navigation instead of being translated in, and the products treated as objects '
-            + 'you catch mid-air rather than photographs laid out in a grid.',
-          'The rule I held to was that playful cannot mean confusing. Every joke on the page '
-            + 'still has to leave someone able to find the flavours, the story and where to buy.',
+          'Tone first, structure second. The loading screen got designed before any page did: '
+            + 'the logo turns up riding a tuk-tuk, on the brand red, and everything after it '
+            + 'inherits that promise.',
+          'The reference was the street, not the supermarket shelf. Oversized type that repeats '
+            + 'like a chant, Arabic sitting naturally in the navigation, products treated as '
+            + 'objects you catch mid-air rather than photographs in a grid. The one rule: '
+            + 'playful cannot mean confusing.',
         ],
       },
       {
         heading: 'The build',
         body: [
-          'Built in React, with the page split into sections that each carry one idea and one '
-            + 'movement, so the fun is paced instead of arriving all at once.',
-          'The product renders were made in Blender rather than shot, which meant the packs '
-            + 'could be lit, angled and thrown around the layout to suit the composition instead '
-            + 'of the layout bending around whatever photography existed.',
-          'The loading screen is the piece that took the most care, because it is the only '
-            + 'moment every single visitor sees. It had to read instantly, feel handmade, and '
-            + 'get out of the way fast.',
+          'React, with the page split into sections that each carry one idea and one movement, '
+            + 'so the fun is paced rather than arriving all at once.',
+          'The packs were built in Blender instead of shot, so they could be lit and thrown '
+            + 'around the layout to suit the composition.',
         ],
       },
       {
         heading: 'The result',
         body: [
-          'The site reads as fun and local in the same breath, which was the whole point and the '
-            + 'part that is easiest to get wrong.',
-          'Edita, the team behind HoHos, came back on it directly, which is the clearest signal '
-            + 'you can get that a creative call landed.',
+          'It reads as fun and local in the same breath, which was the whole point and the '
+            + 'easiest thing to get wrong. Edita, the team behind HoHos, came back on it '
+            + 'directly.',
         ],
       },
     ],
@@ -311,12 +301,10 @@ export const PROJECTS = [
     },
     summary: {
       body: [
-        'HoHos was the project with the least to explain and the most to get right. When the '
-          + 'brand is already in everyone\u2019s memory, the only thing a site can add is a '
-          + 'feeling, so the feeling had to be decided first and defended all the way through.',
-        'Designing the loading screen before anything else sounds backwards, but it is what kept '
-          + 'the rest of the build honest: every section after it had to earn the tone that '
-          + 'screen had already promised.',
+        'When a brand already lives in everyone\u2019s memory, the only thing a site can add '
+          + 'is a feeling. So the feeling got decided first, and defended all the way through.',
+        'Designing the loading screen before anything else sounds backwards, but it kept the '
+          + 'build honest: every section after it had to earn the tone that screen promised.',
       ],
       highlights: [
         'Tone set by the loading screen, then held across the site',
