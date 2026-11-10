@@ -32,6 +32,7 @@ export default function Project() {
   }
 
   const { title, tagline, cover, year, role, stack, intro, sections, beforeAfter, summary } = project
+  const { midImage, testimonial } = project
   const nextProjects = getNextProjects(slug, 3)
 
   return (
@@ -99,12 +100,33 @@ export default function Project() {
         ))}
       </div>
 
+      {/* a second still from the build, sized exactly like the cover */}
+      {midImage && (
+        <figure className="project__still">
+          <img src={midImage.src} alt={midImage.alt} loading="lazy" />
+          {midImage.caption && <figcaption>{midImage.caption}</figcaption>}
+        </figure>
+      )}
+
       {beforeAfter && (
         <section className="project__compare">
           {/* keyed on the slug: navigating between projects remounts the
               slider, so the handle starts centred and the intro plays again */}
           <BeforeAfter key={slug} before={beforeAfter.before} after={beforeAfter.after} />
         </section>
+      )}
+
+      {/* the client's own words, in their own words */}
+      {testimonial && (
+        <aside className="project__quote">
+          <blockquote>
+            <p>{testimonial.quote}</p>
+          </blockquote>
+          <footer className="project__quote-by">
+            <span className="project__quote-name">{testimonial.author}</span>
+            {testimonial.role && <span className="project__quote-role">{testimonial.role}</span>}
+          </footer>
+        </aside>
       )}
 
       <section className="project__summary">

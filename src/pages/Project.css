@@ -193,6 +193,90 @@
   line-height: 1.75;
 }
 
+/* ---- a still from inside the build, sized like the cover ---- */
+.project__still {
+  max-width: 1240px;
+  margin: clamp(56px, 10vh, 110px) auto 0;
+  padding-inline: var(--pad);
+}
+
+.project__still img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.project__still figcaption {
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+/* ---- what the client said ---- */
+.project__quote {
+  max-width: 980px;
+  margin: clamp(64px, 11vh, 120px) auto 0;
+  padding-inline: var(--pad);
+  text-align: center;
+}
+
+/* the mark is decoration, so it is drawn here rather than typed into the copy */
+.project__quote::before {
+  content: '\201C';
+  display: block;
+  margin-bottom: -0.36em;
+  font-size: clamp(88px, 11vw, 150px);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--green-deep);
+}
+
+.project__quote blockquote {
+  margin: 0;
+}
+
+.project__quote blockquote p {
+  margin: 0;
+  font-size: clamp(21px, 2.7vw, 36px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.38;
+  text-wrap: balance;
+}
+
+.project__quote-by {
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  margin-top: clamp(24px, 4vh, 40px);
+}
+
+/* a short rule instead of a dash, so the name reads as an attribution */
+.project__quote-by::before {
+  content: '';
+  width: 38px;
+  height: 2px;
+  margin-bottom: clamp(10px, 2vh, 18px);
+  background: var(--green-deep);
+}
+
+.project__quote-name {
+  font-size: clamp(15px, 1.3vw, 18px);
+  font-weight: 700;
+}
+
+.project__quote-role {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
 /* ---- before & after ---- */
 .project__compare {
   max-width: 1160px;

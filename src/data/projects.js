@@ -231,6 +231,99 @@ export const PROJECTS = [
     lift: 0,
   }),
   project({
+    slug: 'hohos',
+    title: 'HoHos',
+    cover: '/images/projects/hohos.webp',
+    midImage: {
+      src: '/images/projects/preloader.webp',
+      alt: 'The loading screen: the HoHos logo riding a tuk-tuk on brand red',
+      caption: 'The loading screen, which is where the whole tone gets set.',
+    },
+    role: 'UI/UX, 3D & development',
+    stack: ['React', 'Blender', 'UI/UX'],
+    tagline: 'A site for a snack everyone grew up with, built with the Egyptian street in it rather than next to it.',
+    intro:
+      'HoHos is a snack people here grew up on, so the last thing it needed was a tidy '
+      + 'corporate product page. The brief was to make something genuinely fun, close to the '
+      + 'people who actually eat it, and Egyptian in a way that feels lived in. It was built '
+      + 'in React with the 3D made in Blender, and it landed well enough that the Edita team '
+      + 'wrote in to say so.',
+    sections: [
+      {
+        heading: 'The brief',
+        body: [
+          'Everyone already knows HoHos. There was nothing to explain and nothing to sell in '
+            + 'the usual sense, which takes the easy structure off the table: no feature list, '
+            + 'no comparison table, no reason to scroll except that scrolling is enjoyable.',
+          'The hard part was the Egyptian character. It is the kind of thing that collapses '
+            + 'into a few tired symbols the moment you stop paying attention, and a brand this '
+            + 'familiar would have been the first to look fake doing it.',
+        ],
+      },
+      {
+        heading: 'How I approached it',
+        body: [
+          'Tone first, structure second. I decided what the site should feel like in the first '
+            + 'two seconds and let everything else follow from there, which is why the loading '
+            + 'screen got designed before any page did: the logo turns up riding a tuk-tuk, on '
+            + 'the brand red, and the rest of the site inherits that promise.',
+          'The reference was the street rather than the supermarket shelf. Oversized type that '
+            + 'repeats like a chant, the red doing the shouting, Arabic sitting naturally in the '
+            + 'navigation instead of being translated in, and the products treated as objects '
+            + 'you catch mid-air rather than photographs laid out in a grid.',
+          'The rule I held to was that playful cannot mean confusing. Every joke on the page '
+            + 'still has to leave someone able to find the flavours, the story and where to buy.',
+        ],
+      },
+      {
+        heading: 'The build',
+        body: [
+          'Built in React, with the page split into sections that each carry one idea and one '
+            + 'movement, so the fun is paced instead of arriving all at once.',
+          'The product renders were made in Blender rather than shot, which meant the packs '
+            + 'could be lit, angled and thrown around the layout to suit the composition instead '
+            + 'of the layout bending around whatever photography existed.',
+          'The loading screen is the piece that took the most care, because it is the only '
+            + 'moment every single visitor sees. It had to read instantly, feel handmade, and '
+            + 'get out of the way fast.',
+        ],
+      },
+      {
+        heading: 'The result',
+        body: [
+          'The site reads as fun and local in the same breath, which was the whole point and the '
+            + 'part that is easiest to get wrong.',
+          'Edita, the team behind HoHos, came back on it directly, which is the clearest signal '
+            + 'you can get that a creative call landed.',
+        ],
+      },
+    ],
+    testimonial: {
+      quote:
+        'Thank you for bringing HoHos\u2019 story to life in such a creative way! '
+        + 'We truly appreciate your effort and creativity \uD83D\uDE4F\u2764\uFE0F',
+      author: 'Edita',
+      role: 'The team behind HoHos',
+    },
+    summary: {
+      body: [
+        'HoHos was the project with the least to explain and the most to get right. When the '
+          + 'brand is already in everyone\u2019s memory, the only thing a site can add is a '
+          + 'feeling, so the feeling had to be decided first and defended all the way through.',
+        'Designing the loading screen before anything else sounds backwards, but it is what kept '
+          + 'the rest of the build honest: every section after it had to earn the tone that '
+          + 'screen had already promised.',
+      ],
+      highlights: [
+        'Tone set by the loading screen, then held across the site',
+        'Product 3D built in Blender, not photographed',
+        'Egyptian character carried by type and motion, not clip art',
+      ],
+    },
+    tilt: 5,
+    lift: 18,
+  }),
+  project({
     slug: 'solera',
     title: 'Solera',
     cover: '/images/projects/solera.webp',
@@ -458,6 +551,81 @@ export const PROJECTS = [
     lift: 12,
   }),
   project({
+    slug: 'adham',
+    title: 'Adham',
+    cover: '/images/projects/adham-hany.webp',
+    beforeAfter: {
+      before: '/images/projects/adham-wire.jpg',
+      after: '/images/projects/adham-hany.webp',
+    },
+    role: 'UI/UX, development & SEO',
+    stack: ['UI/UX', 'React', 'SEO'],
+    previewLink: 'https://adhamhany.com',
+    tagline:
+      'A portfolio for one of the best video editors around, built to show the work and answer '
+      + 'for him.',
+    intro:
+      'Adham is a video editor at the top of his field who had nowhere single to send people. The '
+      + 'work was scattered, and every enquiry turned into the same conversation typed out again. '
+      + 'The site organises the work and takes the first round of replies off his hands.',
+    sections: [
+      {
+        heading: 'The brief',
+        body: [
+          'Adham needed two things: his work presented in an order that makes sense, and a way to '
+            + 'stop losing time to repeat messages.',
+          'Everything he had was spread across platforms, so a potential client had no way to '
+            + 'judge the range of the work in one sitting.',
+        ],
+      },
+      {
+        heading: 'How I approached it',
+        body: [
+          'The work comes first on every screen. The site is built around the reels themselves, '
+            + 'grouped so someone can take in the range in a minute instead of hunting through a '
+            + 'feed.',
+          'For communication, the site handles the predictable part of the conversation: what he '
+            + 'does, how he works, what a project involves, and a contact route that arrives with '
+            + 'the context already attached, so he only answers the questions that are actually '
+            + 'specific.',
+        ],
+      },
+      {
+        heading: 'The build',
+        body: [
+          'Built from scratch rather than from a template, so the layout follows the work instead '
+            + "of the work being squeezed into someone else's layout.",
+          'The SEO work went in alongside the build: page structure, headings, meta and copy '
+            + 'written so that searching his name, or his field, lands on this page.',
+        ],
+      },
+      {
+        heading: 'The result',
+        body: [
+          'His work now sits in one professional place, and the volume of repetitive back and '
+            + 'forth dropped noticeably.',
+          'The site reached 90% on technical SEO, and it is the link he sends before any '
+            + 'conversation starts.',
+        ],
+      },
+    ],
+    summary: {
+      body: [
+        'The design problem here was editing, not decoration. Adham had plenty of material; what '
+          + 'he needed was an order for it and a page that speaks for him before he does.',
+        'Automating the predictable half of the conversation turned out to be worth as much to '
+          + 'him as the presentation.',
+      ],
+      highlights: [
+        'Work organised into one professional showcase',
+        'Routine replies handled by the site',
+        'Technical SEO at 90%',
+      ],
+    },
+    tilt: 6,
+    lift: 16,
+  }),
+  project({
     slug: 'weazer',
     title: 'Weazer',
     cover: '/images/projects/weazer.webp',
@@ -662,81 +830,6 @@ export const PROJECTS = [
     },
     tilt: -4,
     lift: 42,
-  }),
-  project({
-    slug: 'adham',
-    title: 'Adham',
-    cover: '/images/projects/adham-hany.webp',
-    beforeAfter: {
-      before: '/images/projects/adham-wire.jpg',
-      after: '/images/projects/adham-hany.webp',
-    },
-    role: 'UI/UX, development & SEO',
-    stack: ['UI/UX', 'React', 'SEO'],
-    previewLink: 'https://adhamhany.com',
-    tagline:
-      'A portfolio for one of the best video editors around, built to show the work and answer '
-      + 'for him.',
-    intro:
-      'Adham is a video editor at the top of his field who had nowhere single to send people. The '
-      + 'work was scattered, and every enquiry turned into the same conversation typed out again. '
-      + 'The site organises the work and takes the first round of replies off his hands.',
-    sections: [
-      {
-        heading: 'The brief',
-        body: [
-          'Adham needed two things: his work presented in an order that makes sense, and a way to '
-            + 'stop losing time to repeat messages.',
-          'Everything he had was spread across platforms, so a potential client had no way to '
-            + 'judge the range of the work in one sitting.',
-        ],
-      },
-      {
-        heading: 'How I approached it',
-        body: [
-          'The work comes first on every screen. The site is built around the reels themselves, '
-            + 'grouped so someone can take in the range in a minute instead of hunting through a '
-            + 'feed.',
-          'For communication, the site handles the predictable part of the conversation: what he '
-            + 'does, how he works, what a project involves, and a contact route that arrives with '
-            + 'the context already attached, so he only answers the questions that are actually '
-            + 'specific.',
-        ],
-      },
-      {
-        heading: 'The build',
-        body: [
-          'Built from scratch rather than from a template, so the layout follows the work instead '
-            + "of the work being squeezed into someone else's layout.",
-          'The SEO work went in alongside the build: page structure, headings, meta and copy '
-            + 'written so that searching his name, or his field, lands on this page.',
-        ],
-      },
-      {
-        heading: 'The result',
-        body: [
-          'His work now sits in one professional place, and the volume of repetitive back and '
-            + 'forth dropped noticeably.',
-          'The site reached 90% on technical SEO, and it is the link he sends before any '
-            + 'conversation starts.',
-        ],
-      },
-    ],
-    summary: {
-      body: [
-        'The design problem here was editing, not decoration. Adham had plenty of material; what '
-          + 'he needed was an order for it and a page that speaks for him before he does.',
-        'Automating the predictable half of the conversation turned out to be worth as much to '
-          + 'him as the presentation.',
-      ],
-      highlights: [
-        'Work organised into one professional showcase',
-        'Routine replies handled by the site',
-        'Technical SEO at 90%',
-      ],
-    },
-    tilt: 6,
-    lift: 16,
   }),
   project({
     slug: 'portfolio',
