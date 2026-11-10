@@ -277,6 +277,50 @@
   color: var(--ink-soft);
 }
 
+/* where the quote came from: deliberately quiet, so the words stay the loudest
+   thing in the block. Wraps to its own line on a narrow screen. */
+.project__quote-src {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.project__quote-where {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.project__quote-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 13px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  transition: border-color 0.25s ease, color 0.25s ease, translate 0.25s ease;
+}
+
+.project__quote-link svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+.project__quote-link:hover {
+  color: var(--blue);
+  border-color: var(--blue);
+  translate: 0 -2px;
+}
+
 /* ---- before & after ---- */
 .project__compare {
   max-width: 1160px;

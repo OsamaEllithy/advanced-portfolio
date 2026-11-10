@@ -304,6 +304,10 @@ export const PROJECTS = [
         + 'We truly appreciate your effort and creativity \uD83D\uDE4F\u2764\uFE0F',
       author: 'Edita',
       role: 'The team behind HoHos',
+      source: {
+        label: 'LinkedIn',
+        url: 'https://www.linkedin.com/posts/osama-abd-elnasser_uiuxdesign-producthistory-webdesign-ugcPost-7524180975182946305-y_8s/',
+      },
     },
     summary: {
       body: [
