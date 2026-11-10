@@ -2,7 +2,7 @@
   position: relative;
   container-type: inline-size;
   overflow: hidden;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   border-radius: var(--radius);
   background: var(--mist);
   cursor: ew-resize;

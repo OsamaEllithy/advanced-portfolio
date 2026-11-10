@@ -148,14 +148,16 @@
 
 /* ---- cover, straddling the band ---- */
 .project__cover {
-  max-width: 1240px;
+  max-width: 1360px;
   margin: clamp(48px, 8vh, 96px) auto 0;
   padding-inline: var(--pad);
 }
 
 .project__cover img {
   width: 100%;
-  aspect-ratio: 16 / 10;
+  /* 16/9 at 1360 is the same rendered height as 16/10 was at 1240, just wider -
+     and it crops the source shots less, since most of them are near 16/9 */
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: var(--radius);
 }
@@ -195,7 +197,7 @@
 
 /* ---- a still from inside the build, sized like the cover ---- */
 .project__still {
-  max-width: 1240px;
+  max-width: 1360px;
   margin: clamp(56px, 10vh, 110px) auto 0;
   padding-inline: var(--pad);
 }
@@ -203,7 +205,7 @@
 .project__still img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: var(--radius);
 }
@@ -323,7 +325,7 @@
 
 /* ---- before & after ---- */
 .project__compare {
-  max-width: 1160px;
+  max-width: 1272px;
   margin: clamp(48px, 8vh, 96px) auto 0;
   padding-inline: var(--pad);
 }
